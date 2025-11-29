@@ -1,0 +1,150 @@
+/* Reset + fonte */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Fundo geral */
+body {
+  background: linear-gradient(120deg, #0f3443, #34e89e);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 20px 40px;
+}
+
+/* Título principal */
+h1 {
+  margin-bottom: 26px;
+  text-align: center;
+  color: #f5f5f5;
+  font-weight: 600;
+  letter-spacing: 1px;
+  font-size: 24px;
+}
+
+/* Container dos cards */
+.container {
+  max-width: 1050px;
+  width: 100%;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Cards principais */
+.card {
+  background: #ffffff;
+  padding: 18px 20px;
+  border-radius: 18px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.16);
+  width: 320px;
+}
+
+.card h2 {
+  font-size: 18px;
+  margin-bottom: 18px;
+  font-weight: 600;
+}
+
+/* Botões */
+button {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  font-size: 14px;
+  cursor: pointer;
+  font-weight: 500;
+  border-radius: 6px;
+  border: none;
+  background-color: #2ecc71;
+  color: #ffffff;
+  transition: background 0.15s ease, transform 0.08s ease, box-shadow 0.08s ease;
+}
+
+button:hover {
+  background-color: #27ae60;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transform: translateY(-1px);
+}
+
+button:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+/* Área de saída/status */
+.output {
+  margin-top: 15px;
+  padding: 10px 12px;
+  background: #f5f5f5;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.output h3 {
+  margin-bottom: 6px;
+  font-size: 15px;
+}
+
+/* Input do guichê */
+label {
+  font-size: 14px;
+  display: block;
+  margin-bottom: 4px;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 8px 10px;
+  margin: 6px 0 12px 0;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+}
+
+/* Painel de últimas chamadas */
+#listaPainel {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+#listaPainel li {
+  padding: 6px 8px;
+  margin-bottom: 6px;
+  background: #ecf0f1;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+ /* RESPONSIVO: até 768px de largura */
+ @media (max-width: 768px) {
+  /* PROVA VISUAL: borda azul só no mobile */
+  body {
+    padding: 20px 10px 30px;
+  }
+
+  h1 {
+    font-size: 20px;
+    margin-bottom: 18px;
+  }
+
+  .container {
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 380px;
+    margin: 0 auto 14px auto;
+  }
+}

@@ -1,0 +1,260 @@
+/* RESET + base */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f3f6f8;
+  color: #333;
+}
+
+/* TOPO / HEADER */
+.topo {
+  width: 100%;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 40px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.topo-esquerda {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  height: 50px;
+  width: auto;
+}
+
+.logo-texto span {
+  font-size: 20px;
+  font-weight: 600;
+  color: #0c7b4f;
+}
+
+/* MENU */
+.menu {
+  display: flex;
+  gap: 12px;
+}
+
+.menu-link {
+  text-decoration: none;
+  color: #333;
+  font-size: 15px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  transition: background 0.2s ease, color 0.2s ease, transform 0.08s ease;
+}
+
+.menu-link:hover {
+  background-color: #0c7b4f;
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+
+/* HERO */
+.hero {
+  max-width: 1100px;
+  margin: 40px auto 30px auto;
+  padding: 0 20px;
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.hero-texto {
+  flex: 1;
+}
+
+.hero-texto h1 {
+  font-size: 32px;
+  margin-bottom: 14px;
+  color: #123b3a;
+}
+
+.hero-texto p {
+  font-size: 16px;
+  margin-bottom: 18px;
+  line-height: 1.6;
+}
+
+.hero-imagem {
+  flex: 1;
+  min-height: 220px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #0c7b4f, #34e89e);
+}
+
+/* BOTÃO PRINCIPAL */
+.btn-principal {
+  display: inline-block;
+  background-color: #0c7b4f;
+  color: #ffffff;
+  padding: 10px 22px;
+  border-radius: 999px;
+  font-size: 15px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.08s ease, box-shadow 0.08s ease;
+}
+
+.btn-principal:hover {
+  background-color: #095737;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
+  transform: translateY(-1px);
+}
+
+/* SEÇÕES GENÉRICAS */
+.secao {
+  max-width: 1100px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+.secao h2 {
+  font-size: 24px;
+  margin-bottom: 12px;
+  color: #123b3a;
+}
+
+.secao p {
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 8px;
+}
+
+/* SERVIÇOS */
+.grade-servicos {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 16px;
+}
+
+.servico {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 14px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.servico h3 {
+  font-size: 16px;
+  margin-bottom: 6px;
+  color: #0c7b4f;
+}
+
+.servico p {
+  font-size: 14px;
+}
+
+/* DEPOIMENTOS */
+.lista-depoimentos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 14px;
+}
+
+.depoimento {
+  flex: 1;
+  min-width: 250px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 14px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.depoimento p {
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+.depoimento span {
+  font-size: 13px;
+  color: #555;
+}
+
+/* CONTATO */
+.contato-info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin: 12px 0 18px 0;
+}
+
+.contato-info > div {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 10px 12px;
+  flex: 1;
+  min-width: 250px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.contato-info strong {
+  display: block;
+  margin-bottom: 4px;
+}
+
+/* RODAPÉ */
+.rodape {
+  margin-top: 40px;
+  padding: 14px 20px;
+  background-color: #ffffff;
+  text-align: center;
+  font-size: 13px;
+  color: #777;
+  box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* RESPONSIVO */
+@media (max-width: 900px) {
+  .hero {
+    flex-direction: column;
+  }
+
+  .hero-imagem {
+    width: 100%;
+  }
+
+  .grade-servicos {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .topo {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .menu {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 600px) {
+  .grade-servicos {
+    grid-template-columns: 1fr;
+  }
+
+  .topo {
+    padding: 10px 16px;
+  }
+
+  .hero {
+    margin-top: 24px;
+  }
+}
